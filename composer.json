@@ -1,0 +1,46 @@
+{
+    "name": "api_day_womman/elaverde",
+    "description": "Esta API permite a los usuarios enviar felicitaciones por correo electrónico a las mujeres en su vida en el Día de la Mujer. El usuario proporcionará el correo electrónico del destinatario, el nombre del remitente, un mensaje personalizado y el asunto del correo electrónico. La API utilizará la biblioteca PHPMailer para enviar el correo electrónico.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Edilson Laverde Molina",
+            "email": "edilsonlaverde_182@hotmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "3.*",
+        "vlucas/phpdotenv": "^4.2",
+        "illuminate/database": "^5.5",
+        "illuminate/events": "^5.5",
+        "dompdf/dompdf": "^0.8.3",
+        "phpmailer/phpmailer": "^6.7",
+        "phpoffice/phpspreadsheet": "^1.8",
+        "byjg/migration": "4.2.*",
+        "illuminate/filesystem": "^5.5",
+        "robmorgan/phinx": "^0.11.7",
+        "jenssegers/blade": "^1.4",
+        "illuminate/pagination": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Migrations\\": "database/",
+            "App\\Models\\": "app/Models/",
+            "App\\Controllers\\api\\": "app/controllers/api/",
+            "App\\Controllers\\web\\": "app/controllers/web/",
+            "App\\Interfaces\\": "app/Interfaces/",
+            "App\\Providers\\": "app/Providers/",
+            "App\\Middlewares\\": "app/Middlewares/"
+        }
+    },
+    "scripts": {
+        "migrate": "vendor/bin/phinx migrate -c config-phinx.php",
+        "create-migration": "vendor/bin/phinx create $1 -c config-phinx.php"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}

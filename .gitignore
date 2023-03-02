@@ -1,0 +1,28 @@
+# .gitignore for a Slim PHP project
+
+# Dependency directories
+/vendor
+
+# template cache de blade
+/resourses/compiled/*
+
+# Images users upload
+
+/storage/admins/*
+/storage/clients/*
+
+# Compiled files
+/composer.lock
+/compiled.php
+
+# Environment-specific files
+/.env
+
+# Production environment-specific files
+/config.prod.php
+
+# Log files
+/logs
+
+# Cache files
+/cache
