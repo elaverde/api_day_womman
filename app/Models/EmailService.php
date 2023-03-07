@@ -14,8 +14,12 @@ class EmailService
         $container = new SlimContainer();
         $this->container = $container;
         $this->container['emailProvider'] = function () {
-            //return new OutlookEmailProvider();
-            return new UcundinaEmailProvider();
+            if($_ENV['EMAIL_PROVIDER'] == 'OUTLOOK'){
+                return new OutlookEmailProvider();
+            }
+            if($_ENV['EMAIL_PROVIDER'] == 'UCUNDINAMARCA'){
+                return new UcundinaEmailProvider();
+            }
         };
     }
 
