@@ -26,7 +26,7 @@
                                     </tr>
                                     <tr>
                                       <td align="center" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px">
-                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px; font-family: Arial, Helvetica, sans-serif; font-family: Arial, Helvetica, sans-serif;">La Oficina de Educación Virtual y a Distancia reconoce el <b>valor, labor y lucha</b> de las mujeres y extiende un reconocimiento especial a aquellas que forman parte de nuestra <b>comunidad universitaria</b> hoy, en el Día Internacional de la Mujer 2023.</p>
+                                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:21px;color:#ffffff;font-size:14px; font-family: Arial, Helvetica, sans-serif; font-family: Arial, Helvetica, sans-serif;">La <i>Oficina de Educación Virtual y a Distancia</i> resalta el <b>valor, labor y lucha</b> de las mujeres y extiende un reconocimiento especial a aquellas que forman parte de nuestra <b>comunidad universitaria</b> hoy, en el Día Internacional de la Mujer 2023.</p>
                                       </td>
                                     </tr>
                                   </tbody>
