@@ -20,7 +20,7 @@
 
 # Production environment-specific files
 /config.prod.php
-
+/config-phinx.php
 # Log files
 /logs
 
