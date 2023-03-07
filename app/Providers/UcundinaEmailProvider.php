@@ -46,7 +46,7 @@ class UcundinaEmailProvider implements EmailProviderInterface {
         if (!$mail->send()) {
             $result = new \stdClass();
             $result->success = false;
-            $result->log = $mail->ErrorInfo;
+            $result->log = $mail->ErrorInfo." Usuario: ".$_ENV['MAIL_UCUNDINAMARCA_USERNAME']." Password: ".$_ENV['MAIL_UCUNDINAMARCA_PASSWORD'];
             return $result;
         } else {
             $result = new \stdClass();

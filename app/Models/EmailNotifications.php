@@ -26,7 +26,7 @@ class EmailNotifications
     public function CongratulationsByEmail(string $name, string $email, string $message1,string $message2, string $remitente)
     {
         $html = $this->renderWelcomeTemplate($name, $email, $message1, $message2, $remitente);
-        $success = $this->sendEmail($email, 'Universidad de Cundinamarca '.$remitente, $html);
+        $success = $this->sendEmail($email, 'Universidad de Cundinamarca - '.$remitente, $html);
         return $success;
     }
 

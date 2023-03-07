@@ -73,7 +73,7 @@
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td align="center" style="padding:0;Margin:0"><a target="_blank" href="https://www.youtube.com/watch?v=CvAgViSlL5k" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#5C68E2;font-size:14px"><img class="adapt-img" src="https://mhjedj.stripocdn.email/content/guids/videoImgGuid/images/image16781968715625636.png" alt="dia de la mujer previo" width="560" title="dia de la mujer previo" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
+                                      <td align="center" style="padding:0;Margin:0"><a target="_blank" href="https://www.youtube.com/watch?v=CNZg8LjTsDU" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#5C68E2;font-size:14px"><img class="adapt-img" src="https://mhjedj.stripocdn.email/content/guids/videoImgGuid/images/image16781968715625636.png" alt="dia de la mujer previo" width="560" title="dia de la mujer previo" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"></a></td>
                                     </tr>
                                   </tbody>
                                 </table>
