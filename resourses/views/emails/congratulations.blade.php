@@ -139,7 +139,7 @@
                                 </p>
                                 <p style="color:#FFFFFF; font-family: Arial, Helvetica, sans-serif;" >La 
                                   <b>Oficina de Educación Virtual y a Distancia,</b> 
-                                  conmemora el día internacional de la mujer y agradece su presencia en la institución</p>
+                                  conmemora el día internacional de la mujer y agradece su presencia en la institución.</p>
                                   <br>
                                   <img  class="adapt-img" src="https://mhjedj.stripocdn.email/content/guids/CABINET_983d2955e2c6192c286703d6c72c36fa3669b82d18ea942d387909141b6c98fa/images/recurso_34x.png" alt=""  width="91">
                                   <br>
