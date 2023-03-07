@@ -38,7 +38,8 @@ class CreateTableTracing extends Migration
             $table->string('recipient_full_name',150);
             $table->string('recipient_email',150);
             $table->integer('mail_status');
-            $table->text('mail_content');
+            $table->text('mail_content1');
+            $table->text('mail_content2');
             $table->text('mail_log');
             // Required for Eloquent's created_at and updated_at columns
             $table->timestamps();

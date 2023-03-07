@@ -16,7 +16,8 @@ class SendController
             $data['sender_full_name'],
             $data['recipient_full_name'],
             $data['recipient_email'],
-            $data['mail_content']
+            $data['mail_content1'],
+            $data['mail_content2']
         );
         if (!$validation->status) {
             return $response->withStatus(400)
@@ -30,7 +31,9 @@ class SendController
         $resultnotification = $notification->CongratulationsByEmail(
             $data['recipient_full_name'],
             $data['recipient_email'],
-            $data['mail_content']
+            $data['mail_content1'],
+            $data['mail_content2'],
+            $data['sender_full_name']
         );
 
         $message = Messages::create([
@@ -39,7 +42,8 @@ class SendController
             'recipient_email'       => $data['recipient_email'],
             'mail_status'           => $resultnotification->success,
             'mail_log'              => $resultnotification->log,
-            'mail_content'          => $data['mail_content'],
+            'mail_content1'         => $data['mail_content1'],
+            'mail_content2'         => $data['mail_content2'],
             'created_at'            => date('Y-m-d H:i:s'),
             'updated_at'            => date('Y-m-d H:i:s')
         ]);
@@ -56,7 +60,30 @@ class SendController
                             'data' => $message
                         ]);
     }
-    function validate_greeting($sender_full_name, $recipient_full_name, $recipient_email, $mail_content) {
+    public function retry_email(Request $request, Response $response){
+        //buscamos email no enviados
+        $messages = Messages::where('mail_status', 0)->get();
+        $notification = new EmailNotifications();
+        foreach ($messages as $message) {
+            $resultnotification = $notification->CongratulationsByEmail(
+                $message->recipient_full_name,
+                $message->recipient_email,
+                $message->mail_content1,
+                $message->mail_content2,
+                $message->sender_full_name
+            );
+            $message->mail_status = $resultnotification->success;
+            $message->mail_log = $resultnotification->log;
+            $message->save();
+        }
+        return $response->withStatus(200)
+                        ->withJson([
+                            'message' => 'message created successfully',
+                            'data' => $messages
+                        ]);
+
+    }
+    function validate_greeting($sender_full_name, $recipient_full_name, $recipient_email, $mail_content1, $mail_content2) {
         // Array to store validation errors
         $errors = array();
         // Validate sender_full_name
@@ -78,7 +105,11 @@ class SendController
             $errors[] = "Recipient email is not valid.";
         }
         // Validate mail_content
-        if (empty($mail_content)) {
+        if (empty($mail_content1)) {
+            $errors[] = "Mail content is required.";
+        }
+        // Validate mail_content
+        if (empty($mail_content2)) {
             $errors[] = "Mail content is required.";
         }
         // Return validation errors or success message

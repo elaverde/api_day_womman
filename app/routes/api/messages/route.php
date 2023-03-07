@@ -18,6 +18,12 @@ return function (App $app) {
          * - mail_content: string contenido del correo (obligatorio)
          */
         $app->post('/send_contragulation', 'App\Controllers\api\SendController:store');
+
+        /**
+         * Endpoint para reenviar correos no enviados
+         * 
+         */
+        $app->get('/retry_email', 'App\Controllers\api\SendController:retry_email');
         
     });
 

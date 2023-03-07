@@ -23,19 +23,20 @@ class EmailNotifications
      * 
      * @return El valor de retorno del método sendEmail().
      */
-    public function CongratulationsByEmail(string $name, string $email, string $message)
+    public function CongratulationsByEmail(string $name, string $email, string $message1,string $message2, string $remitente)
     {
-        $html = $this->renderWelcomeTemplate($name, $email, $message);
-        $success = $this->sendEmail($email, 'Soporte', $html);
+        $html = $this->renderWelcomeTemplate($name, $email, $message1, $message2, $remitente);
+        $success = $this->sendEmail($email, 'Universidad de Cundinamarca '.$remitente, $html);
         return $success;
     }
 
-    protected function renderWelcomeTemplate(string $name, string $email, string $password)
+    protected function renderWelcomeTemplate(string $name, string $email, string $message1,string $message2, string $remitente)
     {
         return $this->blade->render('emails.congratulations', [
             'name' => $name,
-            'email' => $email,
-            'password' => $password
+            'msg1' => $message1,
+            'msg2' => $message2,
+            'remitente' => $remitente
         ]);
     }
 
